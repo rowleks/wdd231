@@ -11,33 +11,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/home.js" defer></script>
+    <script src="scripts/chambers.js" defer></script>
     <title>Abuja Chamber of Commerce</title>
   </head>
 
   <body>
     <header>
       <div class="header-top">
-        <div>
-          <img src="images/abuja-chamber-of-commerce-logo.png" alt="Abuja Chamber of Commerce Logo" width="90"
-            height="90">
-
-          <span id="course-title">Abuja Chamber of Commerce</span>
+        <div class="logo">
+          <img src="images/abuja-chamber-of-commerce-logo.webp" alt="Abuja Chamber of Commerce Logo" width="100"
+            height="100">
+          <span class="logo-text">Abuja Chamber of Commerce</span>
         </div>
-
-        <button id="menu" class="hamburger-menu" aria-label="hamburger-menu"></button>
-
       </div>
 
-      <nav id="nav" class="">
-        <a href="index.html" target="_blank" class="nav-link active">Home</a>
-        <a href="#" target="_blank" class="nav-link">Directory</a>
-        <a href="#" target="_blank" class="nav-link">Join</a>
-        <a href="#" class="nav-link">Discover</a>
-      </nav>
+      <div class="header-left">
+        <nav id="nav" class="">
+          <a href="index.html" target="_blank" class="nav-link">Home</a>
+          <a href="#" target="_blank" class="nav-link active">Directory</a>
+          <a href="#" target="_blank" class="nav-link">Join</a>
+          <a href="#" class="nav-link">Discover</a>
+        </nav>
+
+        <div class="toggle-buttons">
+          <button id="menu" class="hamburger-menu" aria-label="hamburger-menu"></button>
+          <button class="theme-toggle"></button>
+        </div>
+      </div>
+
     </header>
     <main>
+
+      <div class="container">
+        <h1>Business Directory</h1>
+        <div class="directory-container">
+          <div class="view-buttons">
+            <button id="grid" class="active">Grid</button>
+            <button id="list">List</button>
+          </div>
+          <div id="directory" class="grid-view">
+            <!-- Business cards will be dynamically inserted here -->
+          </div>
+        </div>
+
+      </div>
 
     </main>
 

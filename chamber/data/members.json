@@ -1,0 +1,65 @@
+[
+  {
+    "name": "DDR vehicles Ltd.",
+    "address": "Plot 12, Kaduna Road, Gwagwalada, Abuja, Nigeria",
+    "phone": "+234-803-1234567",
+    "website": "https://www.ddr.com.ng/",
+    "image": "images/ddr.webp",
+    "membership_level": 2,
+    "description": "A leading producer and exporter of organic automobiles."
+  },
+  {
+    "name": "Fujifilm Nigeria Ltd.",
+    "address": "Suite 5, Yaba Tech Hub, Yaba, Lagos, Nigeria",
+    "phone": "+234-701-9876543",
+    "website": "https://www.fujifilm.com/ng/",
+    "image": "images/fujifilm.webp",
+    "membership_level": 3,
+    "description": "Developing smart solutions for Nigeria’s digital future."
+  },
+  {
+    "name": "Book Me Hotels & Resorts",
+    "address": "No. 8, Palm Avenue, GRA, Port Harcourt, Nigeria",
+    "phone": "+234-805-2223334",
+    "website": "http:bookmehotels.com",
+    "image": "images/bookme.webp",
+    "membership_level": 1,
+    "description": "Luxury hospitality and event services in the heart of Rivers State."
+  },
+  {
+    "name": "Grenergy Solar Energy Solutions",
+    "address": "Block 4, Lekki Industrial Estate, Lekki, Lagos, Nigeria",
+    "phone": "+234-809-5558881",
+    "website": "https://greenergy.com.ng/",
+    "image": "images/grenergy.webp",
+    "membership_level": 2,
+    "description": "Providing affordable and sustainable solar power to Nigerian homes and businesses."
+  },
+  {
+    "name": "Toyobo Textiles Manufacturing Co.",
+    "address": "KM 7, Muhammed Highway, Zaria Road, Kano, Nigeria",
+    "phone": "+234-802-4445566",
+    "website": "https://www.toyobotextiles.com/",
+    "image": "images/toyobo.svg",
+    "membership_level": 3,
+    "description": "Producers of high-quality fabrics and garments for local and export markets."
+  },
+  {
+    "name": "Rhenus Logistics",
+    "address": "Warehouse 3, Apapa Port, Lagos, Nigeria",
+    "phone": "+234-806-7778899",
+    "website": "https://www.rhenus-logistics.com.ng/",
+    "image": "images/rhenus-logistics.svg",
+    "membership_level": 1,
+    "description": "Efficient logistics and transportation services across West Africa."
+  },
+  {
+    "name": "Care Pharmaceuticals",
+    "address": "Plot 22, Trans Amadi Industrial Layout, Port Harcourt, Nigeria",
+    "phone": "+234-810-3332211",
+    "website": "https://www.carepharma.com/",
+    "image": "images/care-pharmaceuticals.webp",
+    "membership_level": 2,
+    "description": "Manufacturing and distributing quality medicines for Nigerian healthcare."
+  }
+]

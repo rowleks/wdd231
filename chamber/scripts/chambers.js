@@ -18,8 +18,26 @@ buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     buttons.forEach((b) => b.classList.remove("active"));
     e.target.classList.add("active");
+    if (e.target.id === "grid") {
+      showList("grid-view", "list-view");
+    } else {
+      showList("list-view", "grid-view");
+    }
   });
 });
+
+
+
+async function displayBusinesses() {
+  const businesses = await fetchBusinesses();
+  businesses.forEach((business) => {
+    const card = createBusinessCard(business);
+    directories.appendChild(card);
+  });
+}
+displayBusinesses();
+
+// Helper functions
 
 function showList(show, hide) {
   directories.classList.remove(hide);
@@ -31,7 +49,6 @@ function createBusinessCard(business) {
   card.classList.add("business-card");
 
   const logo = document.createElement("img");
-  // Use the correct image path for chamber/data/members.json
   logo.src = `${business.image}`;
   logo.alt = `${business.name} Logo`;
   logo.width = 150;
@@ -73,25 +90,3 @@ async function fetchBusinesses() {
     return [];
   }
 }
-
-async function displayBusinesses() {
-  const businesses = await fetchBusinesses();
-  businesses.forEach((business) => {
-    const card = createBusinessCard(business);
-    directories.appendChild(card);
-  });
-}
-
-displayBusinesses();
-
-// View toggle buttons
-document.getElementById("grid").addEventListener("click", () => {
-  showList("grid-view", "list-view");
-});
-
-document.getElementById("list").addEventListener("click", () => {
-  showList("list-view", "grid-view");
-});
-
-// Default view
-showList("grid-view", "list-view");

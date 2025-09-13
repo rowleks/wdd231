@@ -1,10 +1,10 @@
 :root {
-  --primary: hsla(210, 50%, 40%, 1);
-  --secondary: hsla(201, 51%, 69%, 1);
-  --dark: hsla(203, 30%, 26%, 1);
-  --accent: hsla(112, 60%, 74%, 1);
-  --light: hsla(124, 64%, 91%, 1);
-  --white: #ffffff;
+  --primary: hsl(210, 50%, 40%);
+  --secondary: hsl(201, 51%, 69%);
+  --dark: hsl(203, 30%, 26%);
+  --accent: hsl(110, 80%, 25%);
+  --light: hsl(124, 64%, 91%);
+  --white: hsl(0, 0%, 100%);
 }
 
 /* Reset & Base Styles */
@@ -148,9 +148,9 @@ nav a:hover {
 
 .theme-toggle::before {
   content: "\25D0";
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .toggle-buttons {
@@ -159,35 +159,19 @@ nav a:hover {
   gap: 5px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+main {
   padding-block: 2rem;
 }
 
-/* .hero {
-  position: relative;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  padding-inline: 1rem;
   text-align: center;
 }
-
-.hero img {
-  width: 100%;
-  height: auto;
-}
-
-.hero .cta {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  padding: 0.75rem 1.25rem;
-  background: var(--primary);
-  border: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 4px;
-} */
 
 .view-buttons {
   display: flex;
@@ -210,15 +194,19 @@ nav a:hover {
   gap: 2rem;
 }
 
+.directory-container:has(.grid-view) {
+  padding-inline: 1rem;
+}
+
 #directory.grid-view .business-card {
   border-radius: 0.5rem;
-  padding: 1.2rem;
+  padding: 1.5rem;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .business-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -262,18 +250,57 @@ nav a:hover {
   justify-content: center;
 }
 
-.socials a {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
-
 .footer {
   background: var(--primary);
   color: var(--white);
   padding: 2rem;
   text-align: center;
   margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-contact,
+.footer-credits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-credits p {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.footer-contact span {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.footer-contact small {
+  font-size: 0.95rem;
+}
+
+.socials a {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.socials a svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--white);
+  transition: fill 0.3s ease;
+}
+
+.socials a:hover svg {
+  fill: var(--light);
 }
 
 @media (min-width: 768px) {
@@ -292,13 +319,13 @@ nav a:hover {
   nav.active {
     display: none;
   }
-  span#course-title {
-    text-align: center;
-    width: 100%;
-  }
 
   .logo-text {
     max-width: 30ch;
+  }
+
+  .page-title {
+    text-align: left;
   }
 
   #directory.grid-view h3 {
@@ -309,5 +336,13 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+  }
+
+  .list-view .business-card .phone {
+    margin-block: 0;
+  }
+
+  footer.footer {
+    text-align: left;
   }
 }

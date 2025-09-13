@@ -26,8 +26,6 @@ buttons.forEach((button) => {
   });
 });
 
-
-
 async function displayBusinesses() {
   const businesses = await fetchBusinesses();
   businesses.forEach((business) => {
@@ -56,7 +54,7 @@ function createBusinessCard(business) {
   logo.loading = "lazy";
   card.appendChild(logo);
 
-  const name = document.createElement("h3");
+  const name = document.createElement("h2");
   name.textContent = business.name;
   name.style.marginBottom = "0.5em";
   card.appendChild(name);

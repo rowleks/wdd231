@@ -160,7 +160,7 @@ nav a:hover {
 }
 
 main {
-  padding-block: 2rem;
+  padding-bottom: 2rem;
 }
 
 .container {
@@ -302,6 +302,26 @@ main {
 .socials a:hover svg {
   fill: var(--light);
 }
+
+.hero {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 
+--------------------------------------------
+Media Queries
+--------------------------------------------
+*/
 
 @media (min-width: 768px) {
   .hamburger-menu {

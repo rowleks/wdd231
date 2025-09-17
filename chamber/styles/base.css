@@ -304,6 +304,7 @@ main {
 }
 
 .hero {
+  position: relative;
   width: 100%;
   max-height: 600px;
   overflow: hidden;
@@ -317,6 +318,74 @@ main {
   object-position: center;
 }
 
+.hero .cta {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  padding: 0.75rem 1.25rem;
+  background: var(--primary);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cta:hover {
+  background: var(--accent);
+}
+
+section.dynamic-cards {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.data-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.data-card {
+  background: var(--secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.data-card-title {
+  font-size: 1.2rem;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+}
+
+.event {
+  grid-area: auto;
+}
+
+#current-weather {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.temp-desc {
+  text-transform: capitalize;
+}
+
+.current-temp-info,
+.forecast-info {
+  display: grid;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+.forecast-info {
+  padding: 0.75rem 1.2rem;
+  font-size: 1.15rem;
+}
 /* 
 --------------------------------------------
 Media Queries
@@ -364,5 +433,9 @@ Media Queries
 
   footer.footer {
     text-align: left;
+  }
+
+  .event {
+    grid-area: span 2 / 1 / -1 / 3; /* row-start / col-start / row-end / col-end */
   }
 }

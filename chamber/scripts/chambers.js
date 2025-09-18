@@ -153,7 +153,7 @@ async function displayCurrentWeather() {
     currentWeather.appendChild(iconImg);
     currentWeather.appendChild(tempInfo);
   } else {
-    currentWeather.innerHTML = "Weather data unavailable";
+    currentWeather.innerHTML = "<span>Unavailable to fetch data</span>";
   }
 }
 
@@ -178,5 +178,7 @@ async function displayWeatherForecast() {
       0
     )}°C</p>
           `;
+  } else {
+    forecastContainer.innerHTML = "<b>Unavailable to fetch data</b>";
   }
 }

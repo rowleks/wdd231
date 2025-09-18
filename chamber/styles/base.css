@@ -423,6 +423,59 @@ section.dynamic-cards {
 .forecast-info p {
   font-size: 1.15rem;
 }
+
+.spotlight-card-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.spotlight-card {
+  display: grid;
+  background: hsl(200, 37%, 97%);
+  border-radius: 12px;
+
+  border: 2px solid var(--primary);
+}
+
+.upper {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--dark);
+}
+
+.lower {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.lower .info {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.info img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.info b {
+  color: var(--dark);
+}
+
+.info a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.upper h3 {
+  text-align: center;
+}
+
 /* 
 --------------------------------------------
 Media Queries

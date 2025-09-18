@@ -11,6 +11,7 @@ const directories = document.getElementById("directory");
 const buttons = document.querySelectorAll(".view-buttons button");
 const currentWeather = document.getElementById("current-weather");
 const forecastContainer = document.getElementById("weather-forecast");
+const spotlightContainer = document.querySelector(".spotlight-card-container");
 
 document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 
@@ -41,11 +42,14 @@ buttons.forEach((button) => {
   });
 });
 
-if (directories) {
-  displayBusinesses();
-}
-displayCurrentWeather();
-displayWeatherForecast();
+document.addEventListener("DOMContentLoaded", () => {
+  if (directories) {
+    displayBusinesses();
+  }
+  displayCurrentWeather();
+  displayWeatherForecast();
+  displaySpotlight();
+});
 
 // Helper functions
 
@@ -55,7 +59,7 @@ function showList(show, hide) {
 }
 
 async function displayBusinesses() {
-    const businesses = await fetchData("data/members.json");
+  const businesses = await fetchData("data/members.json");
   businesses.forEach((business) => {
     const card = createBusinessCard(business);
     directories.appendChild(card);
@@ -83,4 +87,53 @@ async function displayWeatherForecast() {
   } else {
     forecastContainer.innerHTML = "<b>Unavailable to fetch data</b>";
   }
+}
+
+async function displaySpotlight() {
+  const businesses = await fetchData("data/members.json");
+
+  if (!businesses || businesses.length === 0) {
+    spotlightContainer.innerHTML = "<p>No spotlight businesses found.</p>";
+    return;
+  }
+  const spotlightBusinesses = businesses
+    .filter((b) => b.membership_level === 2 || b.membership_level === 3)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
+
+  spotlightBusinesses.forEach((business) => {
+    const card = createSpotlightCard(business);
+    spotlightContainer.appendChild(card);
+  });
+}
+
+function createSpotlightCard(business) {
+  const card = document.createElement("div");
+  card.classList.add("spotlight-card");
+
+  card.innerHTML = `<div class="upper"><h3>${business.name}</h3></div>
+  <div class="lower">
+  <img src="${business.image}" alt="${
+    business.name
+  } Logo" width="100" height="100" loading="lazy">
+  <div class="info"> 
+  <p><b>Email:</b> ${business.email}</p>
+  <p><b>Phone:</b> ${business.phone}</p>
+  <p><b>Membership Level:</b> ${
+    business.membership_level == 3
+      ? "Gold"
+      : business.membership_level == 2
+      ? "Silver"
+      : "N/A"
+  }</p>
+  <a href="${
+    business.website
+  }" target="_blank" rel="noopener noreferrer"><b>URL:</b> ${
+    business.website
+  }</a>
+  </div>
+  
+  </div>`;
+
+  return card;
 }

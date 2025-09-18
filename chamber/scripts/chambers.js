@@ -1,10 +1,9 @@
 import {
   createBusinessCard,
-  fetchBusinesses,
-  fetchWeather,
   createCurrentWeatherInfo,
   createForecastInfo,
-} from "./utils";
+  fetchData,
+} from "./utils.js";
 
 const nav = document.getElementById("nav");
 const menu = document.getElementById("menu");
@@ -42,7 +41,9 @@ buttons.forEach((button) => {
   });
 });
 
-displayBusinesses();
+if (directories) {
+  displayBusinesses();
+}
 displayCurrentWeather();
 displayWeatherForecast();
 
@@ -54,7 +55,7 @@ function showList(show, hide) {
 }
 
 async function displayBusinesses() {
-  const businesses = await fetchBusinesses();
+    const businesses = await fetchData("data/members.json");
   businesses.forEach((business) => {
     const card = createBusinessCard(business);
     directories.appendChild(card);
@@ -63,7 +64,7 @@ async function displayBusinesses() {
 
 async function displayCurrentWeather() {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=metric`;
-  const weatherData = await fetchWeather(url);
+  const weatherData = await fetchData(url);
   if (weatherData) {
     const info = createCurrentWeatherInfo(weatherData);
     currentWeather.innerHTML = "";
@@ -75,7 +76,7 @@ async function displayCurrentWeather() {
 
 async function displayWeatherForecast() {
   const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=metric`;
-  const forecastData = await fetchWeather(url);
+  const forecastData = await fetchData(url);
   if (forecastData) {
     const info = createForecastInfo(forecastData);
     forecastContainer.innerHTML = info;

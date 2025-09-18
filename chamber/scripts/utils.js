@@ -34,21 +34,10 @@ export function createBusinessCard(business) {
   return card;
 }
 
-export async function fetchBusinesses() {
-  try {
-    const response = await fetch("data/members.json");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Fetch error:", error);
-    return [];
-  }
-}
-
-export async function fetchWeather(url) {
+export async function fetchData(url) {
   try {
     const response = await fetch(url);
-    if (!response.ok) {
+    if (!response?.ok) {
       throw new Error("Network response was not ok");
     }
     const data = await response.json();
@@ -87,10 +76,10 @@ export function createCurrentWeatherInfo(data) {
 
   const tempInfo = document.createElement("div");
   tempInfo.classList.add("current-temp-info");
-  tempInfo.innerHTML = `<p><b>${temp}</b>°C</p>
+  tempInfo.innerHTML = `<p><b>${temp}</b>&deg;C</p>
       <p class="temp-desc">${description}</p>
-      <p>High: ${high}°C</p>
-      <p>Low: ${low}°C</p>
+      <p>High: ${high}&deg;C</p>
+      <p>Low: ${low}&deg;C</p>
       <p>Humidity: ${humidity}%</p>
       <p>Sunrise: ${sunrise}</p>
       <p>Sunset: ${sunset}</p>`;
@@ -111,13 +100,13 @@ export function createForecastInfo(data) {
   const template = `
             <p>${getDayName(
               todayForecast.dt
-            )}: ${todayForecast.main.temp.toFixed(0)}°C</p>
+            )}: ${todayForecast.main.temp.toFixed(0)}&deg;C</p>
             <p>${getDayName(day2forecast.dt)}: ${day2forecast.main.temp.toFixed(
     0
-  )}°C</p>
+  )}&deg;C</p>
             <p>${getDayName(day3forecast.dt)}: ${day3forecast.main.temp.toFixed(
     0
-  )}°C</p>
+  )}&deg;C</p>
           `;
   return template;
 }

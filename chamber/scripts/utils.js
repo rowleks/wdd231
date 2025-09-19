@@ -34,6 +34,37 @@ export function createBusinessCard(business) {
   return card;
 }
 
+export function createSpotlightCard(business) {
+  const card = document.createElement("div");
+  card.classList.add("spotlight-card");
+
+  card.innerHTML = `<div class="upper"><h3>${business.name}</h3></div>
+  <div class="lower">
+  <img src="${business.image}" alt="${
+    business.name
+  } Logo" width="100" height="100" loading="lazy">
+  <div class="info"> 
+  <p><b>Email:</b> ${business.email}</p>
+  <p><b>Phone:</b> ${business.phone}</p>
+  <p><b>Membership Level:</b> ${
+    business.membership_level == 3
+      ? "Gold"
+      : business.membership_level == 2
+      ? "Silver"
+      : "N/A"
+  }</p>
+  <a href="${
+    business.website
+  }" target="_blank" rel="noopener noreferrer"><b>URL:</b> ${
+    business.website
+  }</a>
+  </div>
+  
+  </div>`;
+
+  return card;
+}
+
 export async function fetchData(url) {
   try {
     const response = await fetch(url);
@@ -98,9 +129,7 @@ export function createForecastInfo(data) {
   const day3forecast = data.list[16];
 
   const template = `
-            <p>${getDayName(
-              todayForecast.dt
-            )}: ${todayForecast.main.temp.toFixed(0)}&deg;C</p>
+            <p>Today: ${todayForecast.main.temp.toFixed(0)}&deg;C</p>
             <p>${getDayName(day2forecast.dt)}: ${day2forecast.main.temp.toFixed(
     0
   )}&deg;C</p>

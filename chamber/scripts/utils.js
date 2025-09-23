@@ -2,34 +2,13 @@ export function createBusinessCard(business) {
   const card = document.createElement("section");
   card.classList.add("business-card");
 
-  const logo = document.createElement("img");
-  logo.src = `${business.image}`;
-  logo.alt = `${business.name} Logo`;
-  logo.width = 150;
-  logo.height = 150;
-  logo.loading = "lazy";
-  card.appendChild(logo);
-
-  const name = document.createElement("h2");
-  name.textContent = business.name;
-  name.style.marginBottom = "0.5em";
-  card.appendChild(name);
-
-  const address = document.createElement("p");
-  address.textContent = business.address;
-  card.appendChild(address);
-
-  const phone = document.createElement("p");
-  phone.classList.add("phone");
-  phone.textContent = business.phone;
-  card.appendChild(phone);
-
-  const website = document.createElement("a");
-  website.href = business.website;
-  website.textContent = "Visit Website";
-  website.target = "_blank";
-  website.rel = "noopener noreferrer";
-  card.appendChild(website);
+  card.innerHTML = `
+    <img src="${business.image}" alt="${business.name} Logo" width="150" height="150" loading="lazy">
+    <h2>${business.name}</h2>
+    <p>${business.address}</p>
+    <p class="phone">${business.phone}</p>
+    <a href="${business.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+  `;
 
   return card;
 }

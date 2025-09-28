@@ -13,6 +13,12 @@ const buttons = document.querySelectorAll(".view-buttons button");
 const currentWeather = document.getElementById("current-weather");
 const forecastContainer = document.getElementById("weather-forecast");
 const spotlightContainer = document.querySelector(".spotlight-card-container");
+const modal1 = document.getElementById("modal1");
+const modal2 = document.getElementById("modal2");
+const modal3 = document.getElementById("modal3");
+const modal4 = document.getElementById("modal4");
+const closeModalBtns = document.querySelectorAll("dialog .close-button");
+const mCardButtons = document.querySelectorAll(".membership-card button");
 
 document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 
@@ -50,6 +56,34 @@ document.addEventListener("DOMContentLoaded", () => {
   displayCurrentWeather();
   displayWeatherForecast();
   displaySpotlight();
+});
+
+mCardButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    switch (button.dataset.level) {
+      case "np":
+        modal1.showModal();
+        break;
+      case "bronze":
+        modal2.showModal();
+        break;
+      case "silver":
+        modal3.showModal();
+        break;
+      case "gold":
+        modal4.showModal();
+        break;
+      default:
+        break;
+    }
+  });
+});
+
+closeModalBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const dialog = e.target.closest("dialog");
+    dialog.close();
+  });
 });
 
 // Helper functions

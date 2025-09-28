@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="This is a chamber of commerce site which serves as a resource hub for businesses in the city of Abuja. We provide information on local events, host networking opportunities, create business directories, and encourage local businesses">
+        <meta name="author" content="Rowland Momoh">
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Abuja Chamber of Commerce Business Directory">
+        <meta property="og:description"
+            content="Business directory and resource hub for Abuja's commerce community. Find local businesses, events, and networking opportunities.">
+        <meta property="og:image" content="https://rowleks.github.io/wdd231/chamber/images/logo.webp">
+        <meta property="og:url" content="https://rowleks.github.io/wdd231/chamber/directory.html">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <title>Join Abuja Chamber of Commerce</title>
+
+        <script src="scripts/chambers.js" type="module"></script>
+        <!DOCTYPE html>
+        <html lang="en">
+
+            <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description"
+                    content="This is a chamber of commerce site which serves as a resource hub for businesses in the city of Abuja. We provide information on local events, host networking opportunities, create business directories, and encourage local businesses" />
+                <meta name="author" content="Rowland Momoh" />
+
+                <!-- Open Graph Meta Tags -->
+                <meta property="og:title" content="Abuja Chamber of Commerce Business Directory" />
+                <meta property="og:description"
+                    content="Business directory and resource hub for Abuja's commerce community. Find local businesses, events, and networking opportunities." />
+                <meta property="og:image" content="https://rowleks.github.io/wdd231/chamber/images/logo.webp" />
+                <meta property="og:url" content="https://rowleks.github.io/wdd231/chamber/directory.html" />
+
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+                    rel="stylesheet" />
+
+                <link rel="icon" type="image/png" href="images/favicon.ico" />
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+                <link rel="stylesheet" href="styles/base.css" />
+                <title>Join Abuja Chamber of Commerce</title>
+
+                <script src="scripts/chambers.js" type="module"></script>
+
+            </head>
+
+    <body>
+        <header>
+            <div class="header-top">
+                <div class="logo">
+                    <img src="images/logo.webp" alt="Abuja Chamber of Commerce Logo" width="100" height="100" />
+                    <span class="logo-text">Abuja Chamber of Commerce</span>
+                </div>
+            </div>
+
+            <div class="header-left">
+                <nav id="nav" class="">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="directory.html" class="nav-link">Directory</a>
+                    <a href="join.html" class="nav-link active">Join</a>
+                    <a href="#" class="nav-link">Discover</a>
+                </nav>
+
+                <div class="toggle-buttons">
+                    <button id="menu" class="hamburger-menu" aria-label="hamburger menu"></button>
+                    <button class="theme-toggle" aria-label="toggle theme"></button>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <h1 class="page-title">Join the Chamber</h1>
+
+            <div class="join-wrapper">
+                <form class="join-form" method="get" action="thankyou.html" id="joinForm" novalidate>
+                    <div class="form-row">
+                        <label for="firstName" title="Applicant's first name"> <span>First name</span>
+                            <input type="text" id="firstName" name="firstName" required title="First name"
+                                autocomplete="given-name" />
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="lastName" title="Applicant's last name">
+                            <span>Last name</span>
+                            <input type="text" id="lastName" name="lastName" required title="Last name"
+                                autocomplete="family-name" />
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="orgTitle" title="Your role or title in the organization">Organization Title
+                            <input type="text" id="orgTitle" name="orgTitle" title="Organization title"
+                                autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" />
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email" title="Applicant's email address">Email
+                            <input type="email" id="email" name="email" required title="Email address"
+                                autocomplete="email" placeholder="example@business.com" />
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="mobile" title="Applicant's mobile phone number">Mobile Phone
+                            <input type="tel" id="mobile" name="mobile" required title="Mobile phone"
+                                autocomplete="tel" />
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="businessName" title="Business or organization name">Business / Organization
+                            <input type="text" id="businessName" name="businessName" required title="Business name"
+                                autocomplete="organization" />
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="membership" title="Select membership level">Membership Level
+                            <select id="membership" name="membership" title="Membership level">
+                                <option value="" selected disabled>Select preferred level</option>
+                                <option value="np">Non-profit (NP) Membership (Free)</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="description" title="Describe your business">Organization Description
+                            <textarea id="description" name="description" rows="7"
+                                title="Organization description"></textarea>
+                        </label>
+                    </div>
+
+                    <input type="hidden" id="formTimestamp" name="timestamp" />
+
+                    <div class="form-row">
+                        <button type="submit" value="Join Now">Join Now</button>
+                    </div>
+                </form>
+
+                <aside class="right-promo">
+                    <div class="membership-cards" id="membershipCards">
+                        <article class="membership-card" tabindex="0">
+                            <div>
+                                <h4>Non Profit Membership</h4>
+                            </div>
+                            <button data-level="np">Learn More</button>
+                        </article>
+
+                        <article class="membership-card" tabindex="0">
+                            <div>
+                                <h4>Bronze Membership</h4>
+                            </div>
+                            <button data-level="bronze">Learn More</button>
+                        </article>
+
+                        <article class="membership-card" tabindex="0">
+                            <div>
+                                <h4>Silver Membership</h4>
+                            </div>
+                            <button data-level="silver">Learn More</button>
+                        </article>
+
+                        <article class="membership-card" tabindex="0">
+                            <div>
+                                <h4>Gold Membership</h4>
+                            </div>
+                            <button data-level="gold">Learn More</button>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Modals -->
+            <dialog id="modal1">
+                <h3>Benefits of NP membership</h3>
+                <ul>
+                    <li>Free membership for registered non-profit organizations</li>
+                    <li>Access to community events and workshops</li>
+                    <li>Networking opportunities with local businesses</li>
+                    <li>Listing in the chamber directory</li>
+                </ul>
+                <button id="closeModal" class="close-button" aria-label="Close modal">❌</button>
+            </dialog>
+
+            <dialog id="modal2">
+                <h3>Benefits of Bronze membership</h3>
+                <ul>
+                    <li>All Non-Profit benefits</li>
+                    <li>Discounted event participation fees</li>
+                    <li>Business promotion on chamber website</li>
+                    <li>Access to member-only resources</li>
+                </ul>
+                <button id="closeModal" class="close-button" aria-label="Close modal">❌</button>
+            </dialog>
+
+            <dialog id="modal3">
+                <h3>Benefits of Silver membership</h3>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Priority listing in the business directory</li>
+                    <li>Featured spot in chamber newsletters</li>
+                    <li>Invitations to exclusive networking events</li>
+                </ul>
+                <button id="closeModal" class="close-button" aria-label="Close modal">❌</button>
+            </dialog>
+
+            <dialog id="modal4">
+                <h3>Benefits of Gold membership</h3>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>Premium advertising opportunities</li>
+                    <li>Personalized business support and consulting</li>
+                    <li>Sponsorship opportunities at major events</li>
+                </ul>
+                <button id="closeModal" class="close-button" aria-label="Close modal">❌</button>
+            </dialog>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-contact">
+                    <span>Abuja Chamber of Commerce</span>
+                    <small>Wuse Zone 6, Abuja, Nigeria</small>
+                    <small>info@abujacoc.org</small>
+                    <small>(+234) 80 9151 0848</small>
+                </div>
+
+                <div class="socials">
+                    <a href="https://github.com/rowleks" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook profile">
+                        <!-- svg -->
+                    </a>
+                </div>
+
+                <div class="footer-credits">
+                    <p>WDD231 Class Project</p>
+                    <small>Rowland Momoh | Nigeria</small>
+                    <small class="footer-text">
+                        &copy; <span id="currentyear"></span> Abuja Chamber of Commerce. All rights reserved.
+                    </small>
+                    <small id="lastModified"></small>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

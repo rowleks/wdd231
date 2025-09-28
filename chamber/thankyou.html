@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Thank you for joining the Abuja Chamber of Commerce. Your membership helps strengthen the business community in Abuja.">
+        <meta name="author" content="Rowland Momoh">
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Thank You for Joining Abuja Chamber of Commerce">
+        <meta property="og:description"
+            content="Thank you for becoming a member of the Abuja Chamber of Commerce. We look forward to supporting your business journey in Abuja.">
+        <meta property="og:image" content="https://rowleks.github.io/wdd231/chamber/images/logo.webp">
+        <meta property="og:url" content="https://rowleks.github.io/wdd231/chamber/thankyou.html">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <title>Thank You | Abuja Chamber of Commerce</title>
+
+        <script src="scripts/chambers.js" type="module"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-top">
+                <div class="logo">
+                    <img src="images/logo.webp" alt="Abuja Chamber of Commerce Logo" width="100" height="100">
+                    <span class="logo-text">Abuja Chamber of Commerce</span>
+                </div>
+            </div>
+
+            <div class="header-left">
+                <nav id="nav" class="">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="directory.html" class="nav-link">Directory</a>
+                    <a href="join.html" class="nav-link active">Join</a>
+                    <a href="#" class="nav-link">Discover</a>
+                </nav>
+
+                <div class="toggle-buttons">
+                    <button id="menu" class="hamburger-menu" aria-label="hamburger menu"></button>
+                    <button class="theme-toggle" aria-label="toggle theme"></button>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <h1 class="page-title">Thank you for Joining Us</h1>
+
+            <p>Here are the details of the form you submitted</p>
+
+            <div>
+                <p><strong>First Name:</strong> <span id="firstName"></span></p>
+                <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Phone Number:</strong> <span id="phoneNumber"></span></p>
+                <p><strong>Business Name:</strong> <span id="businessName"></span></p>
+                <p><strong>Business Type:</strong> <span id="businessType"></span></p>
+                <p><strong>Comments:</strong> <span id="comments"></span></p>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-contact">
+                    <span>Abuja Chamber of Commerce</span>
+                    <small>Wuse Zone 6, Abuja, Nigeria</small>
+                    <small>info@abujacoc.org</small>
+                    <small>(+234) 80 9151 0848</small>
+                </div>
+
+                <div class="socials">
+                    <a href="https://github.com/rowleks" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook profile">
+                        <!-- svg -->
+                    </a>
+                </div>
+
+                <div class="footer-credits">
+                    <p>WDD231 Class Project</p>
+                    <small>Rowland Momoh | Nigeria</small>
+                    <small class="footer-text">
+                        &copy; <span id="currentyear"></span> Abuja Chamber of Commerce. All rights reserved.
+                    </small>
+                    <small id="lastModified"></small>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

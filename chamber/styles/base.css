@@ -557,6 +557,9 @@ section.dynamic-cards {
   background: var(--accent);
 }
 
+label > span {
+  color: var(--dark);
+}
 .right-promo {
   width: 100%;
   max-width: 340px;
@@ -606,11 +609,11 @@ section.dynamic-cards {
 
 .membership-card:focus-within,
 .membership-card:hover {
-  border-color: var(--accent);
+  border-color: var(--secondary);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-.membership-card h4 {
+.membership-card h2 {
   color: var(--primary);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
@@ -634,6 +637,14 @@ section.dynamic-cards {
   background: var(--secondary);
 }
 
+b {
+  color: rgb(141, 10, 5);
+}
+
+.page-subtitle {
+  max-width: 65ch;
+  padding-inline: 1rem;
+}
 dialog {
   background-color: white;
   border: 1px solid black;
@@ -686,6 +697,18 @@ dialog li::before {
   cursor: pointer;
 }
 
+.submission-info {
+  display: grid;
+  gap: 0.5rem;
+  min-height: 15rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.submit.page-title,
+.subtitle {
+  text-align: center;
+}
 /* 
 --------------------------------------------
 Media Queries

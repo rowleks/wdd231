@@ -13,6 +13,7 @@ const buttons = document.querySelectorAll(".view-buttons button");
 const currentWeather = document.getElementById("current-weather");
 const forecastContainer = document.getElementById("weather-forecast");
 const spotlightContainer = document.querySelector(".spotlight-card-container");
+const joinForm = document.getElementById("joinForm");
 const modal1 = document.getElementById("modal1");
 const modal2 = document.getElementById("modal2");
 const modal3 = document.getElementById("modal3");
@@ -53,9 +54,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (directories) {
     displayBusinesses();
   }
-  displayCurrentWeather();
-  displayWeatherForecast();
-  displaySpotlight();
+
+  if (forecastContainer) {
+    displayCurrentWeather();
+    displayWeatherForecast();
+  }
+
+  if (spotlightContainer) {
+    displaySpotlight();
+  }
+
+  if (joinForm) {
+    joinForm.addEventListener("submit", () => {
+      document.getElementById("formTimestamp").value = Date.now();
+    });
+  }
 });
 
 mCardButtons.forEach((button) => {

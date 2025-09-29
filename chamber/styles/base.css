@@ -637,7 +637,7 @@ label > span {
   background: var(--secondary);
 }
 
-b {
+.join-form b {
   color: rgb(141, 10, 5);
 }
 

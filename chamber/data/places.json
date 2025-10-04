@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Jabi Lake Park",
+    "address": "Jabi, Abuja",
+    "description": "A scenic waterfront park perfect for picnics, paddle boating, and evening strolls with great views of the city.",
+    "image": "jabi-lake.webp"
+  },
+  {
+    "name": "Millennium Park",
+    "address": "Central Area, Abuja",
+    "description": "A beautifully landscaped urban park featuring winding paths, public art installations, and shaded lawns ideal for family outings.",
+    "image": "millennium-park.webp"
+  },
+  {
+    "name": "Silverbird Galleria",
+    "address": "Ahmadu Bello Way, Central Business District",
+    "description": "A lively entertainment and shopping complex with cinemas, eateries, and boutique stores — great for a day of culture and fun.",
+    "image": "silverbird-galleria.webp"
+  },
+  {
+    "name": "Arts & Culture Hub (ARTX)",
+    "address": "Area 1, Garki",
+    "description": "A creative space showcasing local artists, rotating exhibitions, workshops, and pop-up markets celebrating Nigerian craft and design.",
+    "image": "art-and-culture-hub.webp"
+  },
+  {
+    "name": "Garki International Market",
+    "address": "Garki, Abuja",
+    "description": "A diverse international market offering imported goods, local crafts, specialty foods, and a lively multicultural atmosphere. Great for unique finds and global flavors.",
+    "image": "garki-intl-market.webp"
+  },
+  {
+    "name": "National Mosque Gardens",
+    "address": "Central Area, Off Independence Avenue",
+    "description": "Well-maintained gardens surrounding the iconic National Mosque, offering peaceful spots for reflection and photography.",
+    "image": "national-mosque-gardens.webp"
+  },
+  {
+    "name": "The Greenbelt",
+    "address": "Gwarinpa Estate",
+    "description": "A community green space with jogging trails, weekend markets, and casual cafés — a favorite among locals for weekend relaxation.",
+    "image": "the-greenbelt.webp"
+  },
+  {
+    "name": "Viewpoint at Asokoro",
+    "address": "Asokoro Hill, Asokoro",
+    "description": "A quiet hilltop viewpoint offering panoramic vistas of Abuja's skyline — perfect for sunrise or sunset visits.",
+    "image": "view-point.webp"
+  }
+]

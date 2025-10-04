@@ -118,3 +118,20 @@ export function createForecastInfo(data) {
           `;
   return template;
 }
+
+export function createPlaceCard(place) {
+  const card = document.createElement("div");
+  card.classList.add("place-card");
+
+  card.innerHTML = `
+    <h2>${place.name}</h2>
+    <figure>
+      <img src="images/${place.image}" alt="${place.name}" loading="lazy">
+    </figure>
+    <address>${place.address}</address>
+    <p>${place.description}</p>
+    <button class="learn-more-btn">Learn More</button>
+  `;
+
+  return card;
+}

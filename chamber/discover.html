@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Thank you for joining the Abuja Chamber of Commerce. Your membership helps strengthen the business community in Abuja."
+      content="Discover amazing places and attractions in Abuja. Explore local businesses, cultural sites, and hidden gems in Nigeria's capital city with the Abuja Chamber of Commerce."
     >
     <meta name="author" content="Rowland Momoh">
 
     <!-- Open Graph Meta Tags -->
-    <meta
-      property="og:title"
-      content="Thank You for Joining Abuja Chamber of Commerce"
-    >
+    <meta property="og:title" content="Discover Abuja - Amazing Places & Attractions">
     <meta
       property="og:description"
-      content="Thank you for becoming a member of the Abuja Chamber of Commerce. We look forward to supporting your business journey in Abuja."
+      content="Discover amazing places and attractions in Abuja. Explore local businesses, cultural sites, and hidden gems in Nigeria's capital city."
     >
     <meta
       property="og:image"
@@ -24,7 +21,7 @@
     >
     <meta
       property="og:url"
-      content="https://rowleks.github.io/wdd231/chamber/thankyou.html"
+      content="https://rowleks.github.io/wdd231/chamber/discover.html"
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,15 +31,15 @@
       rel="stylesheet"
     >
 
-    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     >
     <link rel="stylesheet" href="styles/base.css">
-    <title>Thank You | Abuja Chamber of Commerce</title>
+    <title>Discover Abuja - Amazing Places & Attractions</title>
 
-    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/places.js" type="module"></script>
     <script src="scripts/chambers.js" type="module"></script>
   </head>
 
@@ -67,7 +64,7 @@
           <a href="index.html" class="nav-link">Home</a>
           <a href="directory.html" class="nav-link">Directory</a>
           <a href="join.html" class="nav-link">Join</a>
-          <a href="discover.html" class="nav-link">Discover</a>
+          <a href="discover.html" class="nav-link active">Discover</a>
         </nav>
 
         <div class="toggle-buttons">
@@ -82,18 +79,20 @@
     </header>
 
     <main class="container">
-      <h1 class="page-title submit">Thank you for Joining Us</h1>
+      <h1 class="page-title">Discover Amazing Places in Abuja</h1>
 
-      <p class="subtitle">Here is the summary of the form you submitted</p>
-
-      <div class="submission-info">
-        <p><strong>First Name:</strong> <span id="firstName"></span></p>
-        <p><strong>Last Name:</strong> <span id="lastName"></span></p>
-        <p><strong>Email:</strong> <span id="email"></span></p>
-        <p><strong>Mobile Number:</strong> <span id="mobile"></span></p>
-        <p><strong>Business Name:</strong> <span id="businessName"></span></p>
-        <p><strong>Submission Date:</strong> <span id="timestamp"></span></p>
+      <div class="visitor-message-wrapper">
+        <div id="visitor-message" class="visitor-message"></div>
+        <button
+          id="close-visitor-message"
+          class="close-visitor-btn"
+          aria-label="Close message"
+        >
+          ×
+        </button>
       </div>
+
+      <section class="places-container" id="places"></section>
     </main>
 
     <footer class="footer">

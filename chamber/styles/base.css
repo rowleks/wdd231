@@ -723,6 +723,7 @@ dialog li::before {
 .place-card {
   display: grid;
   grid-template-areas: "name" "image" "desc" "addr" "btn";
+  gap: 0.75rem;
 }
 
 .place-card h2 {
@@ -731,7 +732,8 @@ dialog li::before {
 
 .place-card img {
   grid-area: image;
-  width: 250px;
+  display: block;
+  width: 100%;
   object-fit: cover;
   transition: all 0.2s ease;
 }
@@ -747,7 +749,9 @@ dialog li::before {
 
 .place-card button {
   grid-area: btn;
-  height: 35px;
+  min-height: 35px;
+  align-self: last baseline;
+  margin-top: 1rem;
 }
 
 /* Visitor Message Styles */
@@ -897,6 +901,11 @@ Media Queries
     display: grid;
     grid-template-areas: "name name" "image desc" "image addr" "btn btn";
     gap: 1rem;
+  }
+
+  .place-card img {
+    width: 300px;
+    aspect-ratio: 16/9;
   }
 
   .place-card img:hover {

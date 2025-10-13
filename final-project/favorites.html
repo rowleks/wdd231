@@ -4,23 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BookHive - Your online destination for discovering and collecting your favorite books. Browse our curated collection and build your personal library.">
+    <meta name="description" content="View your favorite books collection at BookHive. Manage your personal reading wishlist.">
     <meta name="author" content="BookHive Team">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="BookHive - Online Bookstore">
-    <meta property="og:description" content="Discover your next favorite book at BookHive. Browse, search, and save books to your personal favorites collection.">
-    <meta property="og:type" content="website">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <title>BookHive - Home</title>
+    <link rel="stylesheet" href="styles/favorites.css">
+    <title>BookHive - My Favorites</title>
     
-    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/favorites.js" type="module"></script>
 </head>
 
 <body>
@@ -35,9 +30,9 @@
 
         <div class="header-right">
             <nav id="nav">
-                <a href="index.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="shop.html" class="nav-link">Shop</a>
-                <a href="favorites.html" class="nav-link">Favorites</a>
+                <a href="favorites.html" class="nav-link active">Favorites</a>
             </nav>
 
             <div class="toggle-buttons">
@@ -47,25 +42,27 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to BookHive</h1>
-                <p>Your cozy corner for discovering amazing books</p>
-                <a href="shop.html" class="cta-button">Start Browsing</a>
-            </div>
-        </section>
-
         <div class="container">
-            <section class="featured-books">
-                <h2>Featured Books</h2>
-                <div id="featured-books-container" class="books-grid">
-                    <!-- Featured books will be loaded here -->
+            <h1 class="page-title">My Favorite Books</h1>
+            <p class="page-subtitle">Your personal collection of saved books</p>
+            
+            <div class="favorites-controls">
+                <div class="favorites-count">
+                    <span id="favorites-count">0</span> books in your favorites
                 </div>
-            </section>
+                <button id="clear-all" class="clear-all-btn">Clear All Favorites</button>
+            </div>
 
-            <section class="about-section">
-                <h2>About BookHive</h2>
-                <p>BookHive is your personal library in the digital world. Discover new books, save your favorites, and build your reading wishlist. Whether you're looking for fiction, non-fiction, or educational content, we've got something for every reader.</p>
+            <section class="favorites-section">
+                <div id="favorites-container" class="books-grid">
+                    <!-- Favorite books will be loaded here -->
+                </div>
+                
+                <div id="empty-favorites" class="empty-state" style="display: none;">
+                    <h2>No favorites yet!</h2>
+                    <p>Start browsing books and add them to your favorites to see them here.</p>
+                    <a href="shop.html" class="cta-button">Browse Books</a>
+                </div>
             </section>
         </div>
     </main>

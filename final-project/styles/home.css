@@ -1,0 +1,130 @@
+/* Home Page Specific Styles */
+
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: var(--white);
+  padding: 5rem 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.hero-content h1 {
+  color: var(--white);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.hero .cta-button {
+  background: var(--white);
+  color: var(--primary);
+  font-size: 1.1rem;
+  padding: 1.125rem 2.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.hero .cta-button:hover {
+  background: var(--secondary);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.featured-books {
+  margin: 3rem 0;
+}
+
+.featured-books h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.about-section {
+  background: var(--white);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  margin: 4rem 0;
+  box-shadow: 0 4px 24px var(--shadow);
+  border: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text);
+}
+
+/* Featured books grid adjustments for home page */
+#featured-books-container {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+#featured-books-container .book-card {
+  transition: all 0.3s ease;
+}
+
+#featured-books-container .book-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .about-section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  #featured-books-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}

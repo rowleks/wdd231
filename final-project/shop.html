@@ -4,23 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BookHive - Your online destination for discovering and collecting your favorite books. Browse our curated collection and build your personal library.">
+    <meta name="description" content="Browse our extensive collection of books at BookHive. Find your next great read from fiction, non-fiction, and more.">
     <meta name="author" content="BookHive Team">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="BookHive - Online Bookstore">
-    <meta property="og:description" content="Discover your next favorite book at BookHive. Browse, search, and save books to your personal favorites collection.">
-    <meta property="og:type" content="website">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <title>BookHive - Home</title>
+    <link rel="stylesheet" href="styles/shop.css">
+    <title>BookHive - Shop</title>
     
-    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/shop.js" type="module"></script>
 </head>
 
 <body>
@@ -35,8 +30,8 @@
 
         <div class="header-right">
             <nav id="nav">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link active">Shop</a>
                 <a href="favorites.html" class="nav-link">Favorites</a>
             </nav>
 
@@ -47,25 +42,33 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to BookHive</h1>
-                <p>Your cozy corner for discovering amazing books</p>
-                <a href="shop.html" class="cta-button">Start Browsing</a>
-            </div>
-        </section>
-
         <div class="container">
-            <section class="featured-books">
-                <h2>Featured Books</h2>
-                <div id="featured-books-container" class="books-grid">
-                    <!-- Featured books will be loaded here -->
+            <h1 class="page-title">Shop Books</h1>
+            
+            <div class="shop-controls">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search for books..." aria-label="Search books">
+                    <button id="search-btn" aria-label="Search">🔍</button>
                 </div>
-            </section>
+                
+                <div class="filter-container">
+                    <select id="category-filter" aria-label="Filter by category">
+                        <option value="">All Categories</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                        <option value="biography">Biography</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+            </div>
 
-            <section class="about-section">
-                <h2>About BookHive</h2>
-                <p>BookHive is your personal library in the digital world. Discover new books, save your favorites, and build your reading wishlist. Whether you're looking for fiction, non-fiction, or educational content, we've got something for every reader.</p>
+            <div class="loading" id="loading">Loading books...</div>
+            
+            <section class="books-section">
+                <div id="books-container" class="books-grid">
+                    <!-- Books will be loaded here -->
+                </div>
             </section>
         </div>
     </main>
@@ -99,6 +102,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Book Details Modal -->
+    <dialog id="book-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-modal" aria-label="Close modal">&times;</button>
+            <div id="modal-book-details">
+                <!-- Book details will be loaded here -->
+            </div>
+        </div>
+    </dialog>
 </body>
 
 </html>

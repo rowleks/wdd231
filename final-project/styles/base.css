@@ -71,11 +71,9 @@ header {
   color: inherit;
 }
 
-.logo-text {
-  font-family: "Merriweather", serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--white);
+.logo img {
+ width: 100px;
+ height: auto;
 }
 
 /* Navigation */
@@ -92,7 +90,8 @@ nav.active {
   position: absolute;
   top: 100%;
   right: 0;
-  width: 250px;
+  width: 200px;
+  height: 100vh;
   padding: 1.5rem;
   box-shadow: 0 4px 12px var(--shadow);
   border-radius: 0 0 0 8px;
@@ -114,7 +113,7 @@ nav a:hover {
 }
 
 .nav-link.active {
-  background-color: var(--accent);
+  background-color: var(--white);
   color: var(--primary);
   font-weight: 700;
 }
@@ -155,6 +154,7 @@ main {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 
 .page-title {
   text-align: center;
@@ -261,7 +261,7 @@ main {
 .favorite-btn {
   background: transparent;
   border: 2px solid var(--accent);
-  color: var(--accent);
+  color: var(--primary);
   padding: 0.6rem 1rem;
   border-radius: 8px;
   cursor: pointer;

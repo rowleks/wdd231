@@ -50,6 +50,7 @@ function setupEventListeners() {
   const booksContainer = document.getElementById('books-container');
   const modal = document.getElementById('book-modal');
   const closeModal = document.getElementById('close-modal');
+  const bookRequestForm = document.getElementById('book-request-form');
 
   // Search functionality
   if (searchInput && searchButton) {
@@ -82,6 +83,11 @@ function setupEventListeners() {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) modal.close();
     });
+  }
+
+  // Book request form
+  if (bookRequestForm) {
+    bookRequestForm.addEventListener('submit', handleBookRequestSubmit);
   }
 }
 
@@ -210,4 +216,16 @@ async function checkForBookParam() {
     // Simulate clicking details button
     await handleDetailsClick({ dataset: { bookId } });
   }
+}
+
+// Handle book request form submission
+function handleBookRequestSubmit(e) {
+  // Add timestamp before form submission
+  const timestampField = document.getElementById('timestamp');
+  if (timestampField) {
+    timestampField.value = Date.now().toString();
+  }
+
+  // Form will submit naturally to the confirmation page
+  // No need to prevent default as we want the GET submission to work
 }

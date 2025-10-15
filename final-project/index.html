@@ -1,122 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="BookHive - Your online destination for discovering and collecting your favorite books. Browse our curated collection and build your personal library.">
-    <meta name="author" content="Rowland Momoh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="BookHive - Your online destination for discovering and collecting your favorite books. Browse our curated collection and build your personal library.">
+        <meta name="author" content="Rowland Momoh">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="BookHive - Online Bookstore">
-    <meta property="og:description"
-        content="Discover your next favorite book at BookHive. Browse, search, and save books to your personal favorites collection.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://rowleks.github.io/wdd231/final-project/images/logo.webp">
-    <meta property="og:url" content="https://rowleks.github.io/wdd231/final-project/index.html">
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="BookHive - Online Bookstore">
+        <meta property="og:description"
+            content="Discover your next favorite book at BookHive. Browse, search, and save books to your personal favorites collection.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://rowleks.github.io/wdd231/final-project/images/logo.webp">
+        <meta property="og:url" content="https://rowleks.github.io/wdd231/final-project/index.html">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet">
+        <link rel="icon" href="images/favicon.ico">
 
 
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <title>BookHive - Home</title>
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/home.css">
+        <title>BookHive - Home</title>
 
-    <script src="scripts/main.js" type="module"></script>
-</head>
+        <script src="scripts/main.js" type="module"></script>
+    </head>
 
-<body>
-    <header>
-        <div class="header-top">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.webp" alt="bookhive logo" loading="lazy">
-                </a>
-            </div>
-        </div>
-
-        <div class="header-right">
-            <nav id="nav">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="shop.html" class="nav-link">Shop</a>
-                <a href="favorites.html" class="nav-link">Favorites</a>
-            </nav>
-
-            <div class="toggle-buttons">
-                <button id="menu" class="hamburger-menu" aria-label="hamburger menu"></button>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <img src="images/book-hero.webp" alt="hero-image" loading="lazy">
-            <div class="cta">
-                <div class="hero-content">
-                    <h1>Welcome to BookHive</h1>
-                    <p>Your cozy corner for discovering amazing books</p>
-                    <a href="shop.html" class="cta-button">Start Browsing</a>
+    <body>
+        <header>
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.webp" alt="bookhive logo" loading="lazy">
+                    </a>
                 </div>
-
             </div>
-        </section>
 
-        <div class="container">
-            <section class="featured-books">
-                <h2>Featured Books</h2>
-                <div id="featured-books-container" class="books-grid">
-                    <!-- Featured books will be loaded here -->
+            <div class="header-right">
+                <nav id="nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="favorites.html" class="nav-link">Favorites</a>
+                </nav>
+
+                <div class="toggle-buttons">
+                    <button id="menu" class="hamburger-menu" aria-label="hamburger menu"></button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <img src="images/book-hero.webp" alt="hero-image" loading="lazy">
+                <div class="cta">
+                    <div class="hero-content">
+                        <h1>Welcome to BookHive</h1>
+                        <p>Your cozy corner for discovering amazing books</p>
+                        <a href="shop.html" class="cta-button">Start Browsing</a>
+                    </div>
+
                 </div>
             </section>
 
-            <section class="about-section">
-                <h2>About BookHive</h2>
-                <p>BookHive is your personal library in the digital world. Discover new books, save your favorites, and
-                    build your reading wishlist. Whether you're looking for fiction, non-fiction, or educational
-                    content, we've got something for every reader.</p>
-            </section>
-        </div>
-    </main>
+            <div class="container">
+                <section class="featured-books">
+                    <h2>Featured Books</h2>
+                    <div id="featured-books-container" class="books-grid">
+                        <!-- Featured books will be loaded here -->
+                    </div>
+                </section>
 
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-contact">
-                <span>BookHive</span>
-                <small>Your Online Bookstore</small>
-                <small>info@bookhive.com</small>
-                <small>(555) 123-BOOK</small>
+                <section class="about-section">
+                    <h2>About BookHive</h2>
+                    <p>BookHive is your personal library in the digital world. Discover new books, save your favorites,
+                        and
+                        build your reading wishlist. Whether you're looking for fiction, non-fiction, or educational
+                        content, we've got something for every reader.</p>
+                </section>
             </div>
+        </main>
 
-            <div class="socials">
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
-                            fill="currentColor" />
-                    </svg>
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                            fill="currentColor" />
-                    </svg>
-                </a>
-            </div>
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-contact">
+                    <span>BookHive</span>
+                    <small>Your Online Bookstore</small>
+                    <small>info@bookhive.com</small>
+                    <small>(555) 123-BOOK</small>
+                </div>
 
-            <div class="footer-credits">
-                <p>WDD231 Final Project</p>
-                <small>&copy; <span id="currentyear"></span> BookHive. All rights reserved.</small>
-                <small id="lastModified"></small>
+                <div class="socials">
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="footer-credits">
+                    <p>WDD231 Final Project</p>
+                    <small>&copy; <span id="currentyear"></span> BookHive. All rights reserved.</small>
+                    <small id="lastModified"></small>
+                    <a
+                        href="https://www.loom.com/share/f21a497d861240ea9a5e67e82d5bea5d?sid=a2ecc923-1a3d-4b52-94b4-fa616ff67ade">My
+                        Loom
+                        video description</a>
+                </div>
             </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>
